@@ -14,7 +14,7 @@ const ARABIC_ROMAN_MAP = [
   ["I", 1]
 ];
 
-function romanToArabic(n) {
+function arabicToRoman(n) {
   let result = '';
   ARABIC_ROMAN_MAP.forEach(([roman, val]) => {
     while (n >= val) {
@@ -29,23 +29,23 @@ function romanToArabic(n) {
 
 describe('roman-arabic convert', () => {
   it('1 to I', () => {
-    expect(romanToArabic(1)).toBe('I');
+    expect(arabicToRoman(1)).toBe('I');
   });
 
   it('2 to II', () => {
-    expect(romanToArabic(2)).toBe('II');
+    expect(arabicToRoman(2)).toBe('II');
   });
 
   it('3 to III', () => {
-    expect(romanToArabic(3)).toBe('III');
+    expect(arabicToRoman(3)).toBe('III');
   });
 
   it('4 to IV', () => {
-    expect(romanToArabic(4)).toBe('IV');
+    expect(arabicToRoman(4)).toBe('IV');
   });
 
   it('423 to CDXXIII', () => {
-    expect(romanToArabic(423)).toBe('CDXXIII');
+    expect(arabicToRoman(423)).toBe('CDXXIII');
   });
 });
 
